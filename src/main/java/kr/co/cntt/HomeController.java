@@ -27,4 +27,14 @@ public class HomeController {
 		return "index";
 	}
 	
+
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test(Locale locale, Model model) {
+		logger.info("@@@@ in test...");
+		
+		model.addAttribute("txt", "Hello!!");
+		
+		return "test";
+	}
+	
 }
